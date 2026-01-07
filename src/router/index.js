@@ -6,11 +6,13 @@
 
 // Composables
 import { createRouter, createWebHashHistory } from 'vue-router'
+import Home from '@/pages/index.vue'
 import Life from '@/pages/life.vue'
 import Measurements from '@/pages/measurements.vue'
 
 const routes = [
-  { path: '/', component: Life },
+  { path: '/', component: Home },
+  { path: '/life', component: Life },
   { path: '/measurements', component: Measurements },
 ]
 
