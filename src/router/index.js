@@ -5,7 +5,6 @@
  */
 
 // Composables
-import { routes } from 'vue-router/auto-routes'
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Life from '@/pages/life.vue'
 import Measurements from '@/pages/measurements.vue'
