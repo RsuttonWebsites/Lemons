@@ -36,7 +36,9 @@ export default defineConfig({
       },
     }),
   ],
+  
   base: '/Lemons/',
+
   optimizeDeps: {
     exclude: [
       'vuetify',
