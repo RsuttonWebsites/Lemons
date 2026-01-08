@@ -9,6 +9,7 @@
         type="number"
       />
       <div>{{ tool.resultLabel }}: <strong>{{ tool.output }}</strong></div>
+      <v-divider class="my-4" />
     </div>
 
     <div></div>
@@ -50,12 +51,42 @@ const tools = reactive([
     ),
   },
   {
+    label: 'Feet → Inches',
+    resultLabel: 'Inches',
+    input: '',
+    output: computed(() =>
+      tools[3].input !== ''
+        ? (parseFloat(tools[3].input) * 12).toFixed(2)
+        : '—'
+    ),
+  },
+  {
     label: 'Feet → Meters',
     resultLabel: 'Meters',
     input: '',
     output: computed(() =>
-      tools[3].input !== ''
-        ? (parseFloat(tools[3].input) * 0.3048).toFixed(2)
+      tools[4].input !== ''
+        ? (parseFloat(tools[4].input) * 0.3048).toFixed(2)
+        : '—'
+    ),
+  },
+  {
+    label: 'Meters → Feet',
+    resultLabel: 'Feet',
+    input: '',
+    output: computed(() =>
+      tools[5].input !== ''
+        ? (parseFloat(tools[5].input) / 0.3048).toFixed(2)
+        : '—'
+    ),
+  },
+  {
+    label: 'Centimeters → Meters',
+    resultLabel: 'Meters',
+    input: '',
+    output: computed(() =>
+      tools[5].input !== ''
+        ? (parseFloat(tools[5].input) / 100).toFixed(2)
         : '—'
     ),
   },
@@ -64,8 +95,8 @@ const tools = reactive([
     resultLabel: 'Centimeters',
     input: '',
     output: computed(() =>
-      tools[4].input !== ''
-        ? (parseFloat(tools[4].input) * 100).toFixed(2)
+      tools[6].input !== ''
+        ? (parseFloat(tools[6].input) * 100).toFixed(2)
         : '—'
     ),
   },
